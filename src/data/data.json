@@ -1,0 +1,80 @@
+[
+{
+"id": 1,
+"name": "Deshi Shahi Cow",
+"type": "Cow",
+"breed": "Local Deshi",
+"price": 120000,
+"weight": 280,
+"age": 3,
+"location": "Bogura",
+"description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
+"image": "/assets/cow-1.jpg",
+"category": "Large Animal"
+},
+{
+"id": 2,
+"name": "Holstein Friesian Cow",
+"type": "Cow",
+"breed": "Holstein Friesian",
+"price": 185000,
+"weight": 350,
+"age": 2.5,
+"location": "Sirajganj",
+"description": "High milk producing foreign breed, perfect for Qurbani. Very healthy and active.",
+"image": "/assets/cow-2.jpg",
+"category": "Large Animal"
+},
+{
+"id": 3,
+"name": "Jamuna Pari Cow",
+"type": "Cow",
+"breed": "Black Bengal",
+"price": 35000,
+"weight": 35,
+"age": 1.5,
+"location": "Jamalpur",
+"description": "Pure Black Bengal goat, ideal for Qurbani. Disease free and vaccinated.",
+"image": "/assets/cow-3.jpg",
+"category": "Medium Animal"
+},
+{
+"id": 4,
+"name": "Sahiwal Cow",
+"type": "Cow",
+"breed": "Sahiwal",
+"price": 210000,
+"weight": 420,
+"age": 4,
+"location": "Chittagong",
+"description": "Pure breed Sahiwal cow, very healthy and strong. Perfect for sacrifice.",
+"image": "/assets/cow-1.jpg",
+"category": "Large Animal"
+},
+{
+"id": 5,
+"name": "Telicherry Goat",
+"type": "Goat",
+"breed": "Telicherry",
+"price": 45000,
+"weight": 42,
+"age": 2,
+"location": "Dhaka",
+"description": "Premium quality Telicherry goat, well maintained and healthy.",
+"image": "/assets/cow-2.jpg",
+"category": "Medium Animal"
+},
+{
+"id": 6,
+"name": "Cross Breed Cow",
+"type": "Cow",
+"breed": "Local x Friesian",
+"price": 160000,
+"weight": 310,
+"age": 3.5,
+"location": "Mymensingh",
+"description": "Cross breed cow with excellent health. Suitable for Qurbani and dairy.",
+"image": "/assets/cow-3.jpg",
+"category": "Large Animal"
+}
+]

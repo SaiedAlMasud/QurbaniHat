@@ -4,7 +4,7 @@ import bannerImage from "@/assets/banner-bg.jpg"
 
 const Banner = () => {
     return (
-        <div className="relative w-full h-125 rounded-lg overflow-hidden my-10 sm:mx-8">
+        <div className="relative w-full h-125 rounded-lg overflow-hidden my-10">
             <Image
                 src={bannerImage}
                 alt="Banner background"
