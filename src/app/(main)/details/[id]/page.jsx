@@ -41,6 +41,7 @@ const AnimalDetailsPage  = async ({ params }) => {
                         <div>
                             <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
                                 {animal.name}
+                                <span className="badge bg-green-300 rounded-full ml-5 px-5 py-3">{animal.category}</span>
                             </h1>
                             <p className="text-gray-500 mt-2">{animal.breed}</p>
                         </div>
@@ -53,19 +54,19 @@ const AnimalDetailsPage  = async ({ params }) => {
                         
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <p className="text-gray-500 text-sm">Weight</p>
+                                <p className="text-gray-500 text-md">Weight</p>
                                 <p className="font-semibold">{animal.weight} kg</p>
                             </div>
                             <div>
-                                <p className="text-gray-500 text-sm">Age</p>
+                                <p className="text-gray-500 text-md">Age</p>
                                 <p className="font-semibold">{animal.age} years</p>
                             </div>
                             <div>
-                                <p className="text-gray-500 text-sm">Location</p>
+                                <p className="text-gray-500 text-md">Location</p>
                                 <p className="font-semibold">{animal.location}</p>
                             </div>
                             <div>
-                                <p className="text-gray-500 text-sm">Type</p>
+                                <p className="text-gray-500 text-md">Type</p>
                                 <p className="font-semibold">{animal.type}</p>
                             </div>
                         </div>
