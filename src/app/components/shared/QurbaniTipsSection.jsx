@@ -5,7 +5,7 @@ const QurbaniTipsSection = () => {
     const tipsData = getAllTips();
     
     return (
-        <div className="my-15 px-4">  {/* This should work if other containers work */}
+        <div id="qurbani-tips" className="my-15 px-4"> 
             <div className="mb-8">
                 <h1 className="text-4xl font-bold text-green-800 mb-2">
                     Qurbani Tips & Guidelines
