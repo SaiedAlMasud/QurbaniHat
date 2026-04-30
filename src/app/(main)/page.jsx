@@ -1,6 +1,7 @@
 import AnimalCard from "../components/shared/AnimalCard";
 import Banner from "../components/shared/Banner";
 import FeatureSection from "../components/shared/FeatureSection";
+import QurbaniTipsSection from "../components/shared/QurbaniTipsSection";
 
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
     <div>
         <Banner></Banner>
         <FeatureSection></FeatureSection>
+        <QurbaniTipsSection />
     </div>
   );
 };
