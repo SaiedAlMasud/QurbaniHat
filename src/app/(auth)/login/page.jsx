@@ -1,11 +1,15 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from 'react-icons/fa';
 
 const LoginPage = () => {
+    const router = useRouter(); // Add this
+    const searchParams = useSearchParams(); // Add this
+    const returnUrl = searchParams.get('returnUrl') || '/';
     const {
         register,
         handleSubmit,
@@ -13,7 +17,7 @@ const LoginPage = () => {
     } = useForm()
     const handleLogin = async (data) => {
         console.log(data);
-        const { fname, lname, email, password } = data;
+        const { email, password } = data;
                 const {data: userdata, error } = await authClient.signIn.email({
                     email: email, // required
                     password: password, // required
@@ -23,10 +27,15 @@ const LoginPage = () => {
             if(error){
                 alert(error.message);
             }
+            if (userdata) {
+            alert("Login Successful");
+            router.push(returnUrl); // Redirect to return URL or home
+        }
     }
     const handleSignInGoogle = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
+            callbackURL: returnUrl,
         });
     };
     return (

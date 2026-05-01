@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import animalsData from '@/data/data.json'; // Direct import
 import { IoMdArrowRoundBack } from 'react-icons/io';
+import BookingButton from '@/app/components/shared/BookingButton';
 
 const AnimalDetailsPage  = async ({ params }) => {
     const { id } =await params;
@@ -76,10 +77,8 @@ const AnimalDetailsPage  = async ({ params }) => {
                             <p className="text-gray-600">{animal.description}</p>
                         </div>
                         
-                        <div className="flex gap-4 pt-4">
-                            <button className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg">
-                                Book Now
-                            </button>
+                        <div className="flex gap-4">
+                            <BookingButton animal={animal} />
                             <button className="flex-1 border-2 border-green-600 text-green-600 hover:bg-green-50 font-semibold py-3 rounded-lg">
                                 Contact Seller
                             </button>
