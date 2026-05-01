@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import bannerImage from "@/assets/banner-bg.jpg"
+import Link from 'next/link';
 
 const Banner = () => {
     return (
@@ -24,7 +25,7 @@ const Banner = () => {
                         Livestock Booking
                     </h1>
                     <button className="bg-green-700 hover:bg-white hover:text-green-700 mt-10 text-white font-semibold px-8 py-3 rounded-lg">
-                        Browse Animals
+                        <Link href="/allanimals">Browse Animals</Link>
                     </button>
                 </div>
             </div>

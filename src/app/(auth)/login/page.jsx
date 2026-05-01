@@ -1,7 +1,9 @@
 'use client'
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa';
 
 const LoginPage = () => {
     const {
@@ -9,9 +11,24 @@ const LoginPage = () => {
         handleSubmit,
         formState: { errors }
     } = useForm()
-    const handleLogin = (data) => {
+    const handleLogin = async (data) => {
         console.log(data);
+        const { fname, lname, email, password } = data;
+                const {data: userdata, error } = await authClient.signIn.email({
+                    email: email, // required
+                    password: password, // required
+                    rememberMe:true,
+                    callbackURL: "/",
+                })
+            if(error){
+                alert(error.message);
+            }
     }
+    const handleSignInGoogle = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    };
     return (
         <div className='container mx auto min-h-[60vh] flex justify-center items-center'>
             <div className="p-10 rounded-xl bg-base-200">
@@ -28,12 +45,15 @@ const LoginPage = () => {
                         {errors.password && <p className='text-red-600 mt-3 text-[14px]'>{errors.password.message}</p>}
                     </fieldset>
                     <input type="submit" value="Login" className='btn text-lg bg-green-600 text-white px-7 hover:bg-green-800' />
-                </form>
-                <p>Don&apos;t have an account?
+                    <p>Don&apos;t have an account?
                     <span className='underline hover:text-green-500'>
                         <Link href="/register"> Register Now</Link>
                     </span>
                 </p>
+                </form>
+                
+                <p className="text-lg font-bold text-center">Or</p>
+                    <button onClick={handleSignInGoogle} className='flex justify-center items-center gap-4 mx-auto rounded-md py-1 text-md bg-green-600 text-white px-3 hover:bg-green-800'><FaGoogle /> SignIn With Google</button>
             </div>
         </div>
     );
