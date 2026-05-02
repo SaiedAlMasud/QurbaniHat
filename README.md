@@ -9,13 +9,12 @@
 The purpose of QurbaniHat is to:
 - Provide a trusted platform for livestock booking during Qurbani season
 - Simplify the process of finding and booking quality animals
-- Ensure transparency in pricing and animal specifications
 - Offer a convenient online booking system for customers
 - Connect verified sellers with potential buyers
 
 ## 🌐 Live URL
 
-[Live Demo](https://qurbani-saiedalmasud.vercel.app/) *(Replace with your actual Vercel URL)*
+[Live Link](https://qurbani-saiedalmasud.vercel.app/) 
 
 ## ✨ Key Features
 
