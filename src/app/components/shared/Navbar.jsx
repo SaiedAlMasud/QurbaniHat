@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import navIamge from "../../../assets/navbar.png";
+import navIamge from "../../../../public/assets/navbar.png";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { FaUser } from "react-icons/fa";
 import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
@@ -39,7 +38,7 @@ const Navbar = () => {
                         {
                         user ? (<li><NavLink href="/profile">Profile</NavLink></li>) :
                         ("")
-                    }
+                        }
                     </ul>
                 </div>
 
@@ -62,7 +61,7 @@ const Navbar = () => {
 
             <div className="navbar-end space-x-4">
                 {
-                    user ? (<p className="text-md text-green-800">Hello! {user.name}</p>) :
+                    user ? (<p className="text-md text-green-800 hidden md:flex">Hello! {user.name}</p>) :
                         ("")
                 }
 

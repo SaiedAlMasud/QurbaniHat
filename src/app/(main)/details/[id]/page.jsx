@@ -7,7 +7,6 @@ import BookingButton from '@/app/components/shared/BookingButton';
 
 const AnimalDetailsPage  = async ({ params }) => {
     const { id } =await params;
-    // Find the animal directly from imported data
     const animal = animalsData.find(a => a.id === parseInt(id));
     
     if (!animal) {

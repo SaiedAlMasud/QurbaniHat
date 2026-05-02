@@ -5,10 +5,11 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from 'react-icons/fa';
+import 'animate.css';
 
 const LoginPage = () => {
-    const router = useRouter(); // Add this
-    const searchParams = useSearchParams(); // Add this
+    const router = useRouter();
+    const searchParams = useSearchParams(); 
     const returnUrl = searchParams.get('returnUrl') || '/';
     const {
         register,
@@ -40,7 +41,7 @@ const LoginPage = () => {
     };
     return (
         <div className='container mx auto min-h-[60vh] flex justify-center items-center'>
-            <div className="p-10 rounded-xl bg-base-200">
+            <div className="p-10 rounded-xl bg-base-200 animate__animated animate__lightSpeedInLeft">
                 <h1 className='text-2xl font-bold text-center text-green-700'>Login Your Account</h1>
                 <form action="" className='flex flex-col gap-2 justify-center' onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">

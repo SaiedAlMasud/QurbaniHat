@@ -1,10 +1,19 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnimalCard from './AnimalCard';
+import LoadingSpinner from './LoadingSpinner';
 
 const SortedAnimal = ({ animals: initialAnimals }) => {
     const [animals, setAnimals] = useState(initialAnimals);
     const [sortOption, setSortOption] = useState('default');
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setAnimals(initialAnimals);
+            setLoading(false);
+        }, 500);
+    }, []);
 
     const handleSortChange = (e) => {
         const value = e.target.value;
@@ -22,6 +31,10 @@ const SortedAnimal = ({ animals: initialAnimals }) => {
         
         setAnimals(sortedAnimals);
     };
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+
 
     return (
         <>

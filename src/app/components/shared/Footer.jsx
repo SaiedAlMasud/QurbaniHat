@@ -4,7 +4,7 @@ import { RiInstagramFill } from 'react-icons/ri';
 import { FaLocationDot } from "react-icons/fa6";
 import { SiGmail } from 'react-icons/si';
 import Image from 'next/image';
-import logo from '@/assets/navbar.png'
+import logo from '../../../../public/assets/navbar.png'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaUser, FaEnvelope, FaEdit, FaCalendarAlt, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import 'animate.css';
-import Navbar from '../components/shared/Navbar';
 
 const ProfilePage = () => {
     const router = useRouter();
@@ -42,16 +41,13 @@ const ProfilePage = () => {
 
     return (
         <div className="container mx-auto px-4 py-10">
-            <div className='mb-8'><Navbar></Navbar></div>
-            {/* Page Header */}
             <div className="mb-8">
                 <h1 className="text-3xl font-bold text-gray-800">My Profile</h1>
                 <p className="text-gray-500 mt-1">Manage your account information</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Profile Card - Left Sidebar */}
-                <div className="lg:col-span-1">
+                <div className="lg:col-span-1 animate__animated animate__lightSpeedInLeft">
                     <div className="bg-white rounded-xl shadow-lg p-6 text-center border border-gray-100">
                         <div className="relative w-32 h-32 mx-auto mb-4">
                             {user.image ? (
@@ -80,8 +76,7 @@ const ProfilePage = () => {
                     </div>
                 </div>
 
-                {/* Profile Details - Right Content */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 animate__animated animate__lightSpeedInRight">
                     <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                         <div className="p-6 border-b border-gray-100">
                             <h3 className="text-xl font-bold text-gray-800">Profile Information</h3>
