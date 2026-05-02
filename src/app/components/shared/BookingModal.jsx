@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { ImCross } from 'react-icons/im';
 
 const BookingModal = ({ animal, isOpen, onClose }) => {
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', address: '' });
@@ -20,11 +21,11 @@ const BookingModal = ({ animal, isOpen, onClose }) => {
     return (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-xl max-w-md w-full p-6 relative">
-                <button onClick={onClose} className="absolute right-4 top-4 text-gray-400 hover:text-gray-600">✕</button>
+                <button onClick={onClose} className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"><ImCross /></button>
                 
                 {success ? (
                     <div className="text-center py-8">
-                        <div className="text-green-600 text-5xl mb-4">✓</div>
+                        <div className="text-green-600 text-5xl mb-4"><ImCross /></div>
                         <h3 className="text-xl font-bold">Booking Successful!</h3>
                         <p className="text-gray-600 mt-2">We&apos;ll contact you soon.</p>
                     </div>
