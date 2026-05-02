@@ -61,7 +61,8 @@ const Navbar = () => {
 
             <div className="navbar-end space-x-4">
                 {
-                    user ? (<p className="text-md text-green-800 hidden md:flex">Hello! {user.name}</p>) :
+                    user ? (<NavLink className="text-md text-green-800 hidden md:flex" href="/profile">Hello! {user.name}</NavLink>
+                    ) :
                         ("")
                 }
 
