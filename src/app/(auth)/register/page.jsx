@@ -16,11 +16,12 @@ const RegisterPage = () => {
     const router = useRouter();
 
     const handleRegister = async (data) => {
-        const { fname, lname, email, password } = data;
+        const { fname, lname, email, password, image } = data;
         const { data: userdata, error } = await authClient.signUp.email({
             name: fname + " " + lname,
             email: email, // required
             password: password, // required
+            image: image, // required
             callbackURL: "/",
         })
         //console.log(userdata, error);
@@ -53,6 +54,13 @@ const RegisterPage = () => {
                         <legend className="fieldset-legend text-gray-500 text-md">Email</legend>
                         <input {...register("email", { required: "Email required" })} type="text" className="input" placeholder="Type here" />
                         {errors.email && <p className='text-red-600 mt-3 text-[14px]'>{errors.email.message}</p>}
+                    </fieldset>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset-legend text-gray-500 text-md">Image URL</legend>
+                        <input {...register("image", { required: "Image URL required" })} type="text" className="input"
+                            placeholder="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg"
+                            defaultValue="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg" />
+                        {errors.image && <p className='text-red-600 mt-3 text-[14px]'>{errors.image.message}</p>}
                     </fieldset>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-gray-500 text-md">Password</legend>

@@ -36,6 +36,10 @@ const Navbar = () => {
                     >
                         <li><NavLink href="/">Home</NavLink></li>
                         <li><NavLink href="/allanimals">All Animals</NavLink></li>
+                        {
+                        user ? (<li><NavLink href="/profile">Profile</NavLink></li>) :
+                        ("")
+                    }
                     </ul>
                 </div>
 
@@ -49,6 +53,10 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 text-lg text-green-700 gap-8">
                     <li><NavLink href="/">Home</NavLink></li>
                     <li><NavLink href="/allanimals">All Animals</NavLink></li>
+                    {
+                        user ? (<li><NavLink href="/profile">Profile</NavLink></li>) :
+                        ("")
+                    }
                 </ul>
             </div>
 
@@ -60,7 +68,16 @@ const Navbar = () => {
 
                 {user ? (
                     <>
-                        <FaUser className="text-4xl text-green-700" />
+                        <div>
+                            <Image 
+                            src ={user.image}                            
+                            width={40}
+                            height={40}
+                            className="rounded-full object-cover border-2 border-green-300"
+                            alt="User Profile">
+
+                            </Image>
+                        </div>
                         <button onClick={async() => await authClient.signOut()} className="btn bg-green-600 text-white hover:bg-green-800">
                             LogOut
                         </button>
